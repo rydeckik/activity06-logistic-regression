@@ -86,13 +86,23 @@ resume %>%
 
 6. What is the probability that a randomly selected résumé/person will be called back?
 
-$Pr(\texttt{received_callback} = Yes) = 0.08$
+$Pr({received\_callback} = Yes) = 0.08$
 
 7. What are the odds that a randomly selected résumé/person will be called back?
 
 $\frac{Pr(Y_i = Yes)}{Pr(Y_i = No)} = \frac{p_i}{1-p_i} = \frac{0.08}{1 - 0.08} = 0.08696$
 
 The odds are 0.08696 to 1.
+
+NOTE: THE NUMBERING IN THE DAY01 INSTRUCTIONS IS OFF. 6 AND 7 ARE REAPEATED 2X.
+
+8. What is the probability that a randomly selected résumé/person perceived as Black will be called back?
+
+$Pr({received\_callback} = Yes | Black) = 0.064$
+
+9. What are the odds that a randomly selected résumé/person perceived as Black will be called back?
+
+
 
 
 ```{r}
@@ -110,6 +120,24 @@ tidy(resume_mod) %>%
 
 
 8. Write the estimated regression equation. Round to 3 digits
+
+
+$\log\left(\frac{0.08}{1 - 0.08}\right) = -2.675 + 0.438$
+
+
+9. Using your equation in (8), write the simplified estimated regression equation corresponding to résumés/persons perceived as Black. Round to 3 digits.
+
+
+$\log\left(\frac{0.08}{1 - 0.08}\right) = -2.675 + 0.438(6.45)$
+
+
+Based on your model, if a randomly selected résumé/person perceived as Black,
+
+10. What are the log-odds that they will be called back?
+
+11. What are the odds that they will be called back? How does this related back to your answer from (7)? Hint: In (9) you obtained the log-odds (i.e., the natural log-odds). How can you back-transform this value to obtain the odds?
+
+12. What is the probability that will be called back? How does this related back to your answer from (6)? Hint Use the odds to calculate this value.
 
 
 
